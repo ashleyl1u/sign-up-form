@@ -15,7 +15,12 @@ document.querySelector('.form').addEventListener('submit',(e) => {
 
 
 document.querySelector('#confirm-password').addEventListener('keyup', (e) =>{
-  confirmPassword();
+    const password = document.querySelector('#password');
+    const confirmPassword = document.querySelector('#confirm-password');
+    const confirmPasswordError = document.querySelector('.confirm-password-error');
+    password.classList.remove('invalid');
+    confirmPassword.classList.remove('invalid');
+    confirmPasswordError.textContent = '';
 })
 
 function confirmPassword(){
@@ -33,7 +38,7 @@ function confirmPassword(){
   else{
     password.classList.remove('invalid');
     confirmPassword.classList.remove('invalid');
-    confirmPasswordError.textContent = ''
+    confirmPasswordError.textContent = '';
 
     return true;
   }
