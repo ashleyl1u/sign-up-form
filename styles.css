@@ -13,3 +13,14 @@ body{
   display: flex;
 }
 
+
+
+.invalid{
+  border-style: solid;
+  border-color: red;
+}
+
+.valid{
+  border-style: solid;
+  border-color: green;
+}
