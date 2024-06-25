@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sign Up</title>
   <link rel="stylesheet" href="./styles.css">
+
+  
 </head>
 <body>
   <div>
@@ -12,43 +14,62 @@
   </div>
 
   <div class="container">
-    <div>Get Started</div>
     <form class="form">
       <fieldset>
         <legend>Get Started</legend>
+
+        <div class="inputs">
+          <ul>
+            <li>
+              <label for="first-name">First Name</label>
+              <input type="text" id="first-name" required>
+            </li>
+  
+            <li>
+              <label for="email">Email</label>
+              <input type="email" id="email" required>
+            </li>
+  
+            <li>
+              <label for="password">Password</label>
+              <input type="password" id="password" class="password" minlength="8" required>
+            </li>
+          </ul>
+  
+          <ul>
+            <li>
+              <label for="last-name">Last Name</label>
+              <input type="text" id="last-name" required>
+            </li>
+  
+            <li>
+              <label for="phone-number">Phone Number</label>
+              <input type="text" id="phone-number" pattern="\d\d\d-\d\d\d-\d\d\d\d" required placeholder="XXX-XXX-XXXX">
+           
+            </li>
+  
+            <li>
+              <label for="confirm-password">Confirm Password</label>
+              <input type="password" id="confirm-password" class="password" required>
+              <p class="error confirm-password-error"></p>
+            </li>
+          </ul>
+        </div>
         
-        <label for="first-name">First Name</label>
-        <input type="text" id="first-name" required>
-        <p class="error first-name-error"></p>
+        
   
-        <label for="last-name">Last Name</label>
-        <input type="text" id="last-name" required>
-  
-        <label for="email">Email</label>
-        <input type="email" id="email" required>
-  
-  
-        <label for="phone-number">Phone Number</label>
-        <input type="text" id="phone-number" pattern="\d\d\d-\d\d\d-\d\d\d\d" required placeholder="XXX-XXX-XXXX">
-     
-  
-        <label for="password">Password</label>
-        <input type="password" id="password" class="password" minlength="8" required>
-    
-  
-        <label for="confirm-password">Confirm Password</label>
-        <input type="password" id="confirm-password" class="password" required>
-        <p class="error confirm-password-error"></p>
+        
       </fieldset>
 
       <button type="submit" class="submit-button">Create Account</button>
+      <div>Already have an account? <a>Log in</a></div>
 
     </form>
     
 
 
     
-    <div>Already have an account? <a>Log in</a></div>
+    
   </div>
   
   <script src="main.js"></script>
